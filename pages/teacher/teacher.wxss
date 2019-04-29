@@ -1,0 +1,93 @@
+/* pages/teacherdetail/teacherdetail.wxss */
+
+page {
+  font-size: 12pt;
+}
+
+.item-left {
+  width: 40%;
+  box-shadow: 1px 1px 1px #ffd9d8;
+  border-radius: 15rpx;
+}
+
+.teacher-img {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 15rpx;
+}
+
+.teacher-desc .time {
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.teacher-desc .detail {
+  margin-top: 10rpx;
+  text-indent: 2em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9;
+  overflow: hidden;
+}
+
+.teacher-desc {
+  width: 60%;
+  padding: 10rpx;
+  margin-left: 10rpx;
+}
+
+.teacher-item {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+}
+
+.teacher-type {
+  padding: 10rpx;
+}
+
+
+.tip-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  font-size: 32rpx;
+}
+.notfind1 image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.notfind1 .text1 {
+  color: #ddd;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+}
+
+/*设置盒子居中*/
+
+.notfind1 {
+  /* background-color: red; */
+  position: absolute;
+  top: 30%;
+  left: 36%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -111;
+}
+
+.tips1 {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+   /* background-color: red */
+}
+
+.hidden{
+  display: none;
+}

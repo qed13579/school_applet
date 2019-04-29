@@ -1,0 +1,36 @@
+
+<block wx:for="{{classlist}}" wx:for-index="index" wx:key>
+<view class="mc_box">
+  <image class='mc_box_left' bindtap='tocoursedetail' src='{{classlist[index].img}}' data-id='{{classlist[index].classid}}'    data-detail='{{classlist[index].detail}}' data-img='{{classlist[index].img}}' data-typename='{{classlist[index].classtype}}'></image>
+  <view class='mc_box_right'>
+    <view class='mc_box_right_top'>
+      <view class='mc_box_right_top_box'>课程类型：{{classlist[index].classtype}}</view>
+      <view class='mc_box_right_top_box'>课程名称：{{classlist[index].classname}}</view>
+      <view class='mc_box_right_top_box'>课时：{{classlist[index].sparetime}} * {{classlist[index].num}} 课时</view>
+    </view>
+    <view class='mc_box_right_bottom'>
+
+       <view class='mc_box_right_bottom_button0' bindtap='toschedulecard'  data-classname='{{classlist[index].classname}}' data-id='{{classlist[index].classid}}' data-num='{{classlist[index].num}}' data-orderid='{{classlist[index].orderid}}' data-img='{{classlist[index].img}}' data-typename='{{classlist[index].classtype}}'>详情</view>
+             <!-- <view class='mc_box_right_bottom_button0' bindtap='tips' data-id='{{classlist[index].orderid}}'>订单详情</view> -->
+    </view>
+
+  
+
+  </view>
+</view>
+</block>
+
+          <view class='tips'>
+            <view  wx:if="{{isHasData}}" hidden='{{hidden}}'>
+              <view wx:if="{{hasMore}}" class="tip-text">
+                上拉加载...
+              </view>
+              <view wx:else>
+                <text class="tip-text">没有更多内容了</text>
+              </view>
+            </view>
+            <view hidden='{{hidden}}' class='notfind1' wx:else >
+              <image src='/images/notfind.png'></image>
+              <view class='text1'>暂无数据</view>
+            </view>
+          </view>

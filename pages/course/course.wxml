@@ -1,0 +1,48 @@
+<!--pages/course/course.wxml-->
+<view class='wrap'>
+  <view class='wrap-top'>
+    <view class='search-box'>
+      <image src='/images/search.png' class='search-icon'></image>
+      <input class='search-input' placeholder='搜索课程' value="{{search.content}}" bindinput="onInput"></input>
+      <image src='/images/delete2.png' class="search-back-pic {{!search.content?'hidden':''}}" bindtap="searchdelete"></image>
+    </view>
+    <text class='cancel' bindtap='tosearch'>搜索</text>
+  </view>
+  <view class='course-nav'>
+    <scroll-view scroll-x="true" >
+      <view class="swiper-tab" style='width :{{courseType.length*180}}rpx;'>
+      <block wx:for="{{courseType}}" wx:key="key">
+        <view class="swiper-tab-item {{currentTab==item.id-1?'active':''}}" data-current="{{item.id-1}}" data-id="{{item.id}}" bindtap="clickTab">{{item.name}}</view>
+        </block>
+      </view>
+    </scroll-view>
+    <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" style='height:{{swiperHight*0.82}}px;'>
+      <swiper-item wx:for="{{courseType.length}}" wx:key="key">
+        <scroll-view style='height:100%' scroll-y bindscrolltolower="onReachBottom" bindscrolltoupper="onPullDownRefresh">
+          <block wx:for="{{CourseList}}" wx:key="key">
+            <view class='course-list'>
+              <view class='list-item' data-id="{{item.id}}" data-img="{{item.img}}" data-desc="{{item.descs}}" data-typename="{{item.type}}" data-name="{{item.title}}" bindtap='toCoursedetial'>
+                <image src='{{item.img}}' class='course-img' style="height:{{imageHight}}px;"></image>
+                <view class='course-name'>{{item.title}}</view>
+              </view>
+            </view>
+          </block>
+          <view class="tips1" wx:if="{{isHasData}}" hidden='{{hidden}}'>
+            <view wx:if="{{hasMore}}" class="tip-text">
+              上拉加载...
+            </view>
+            <view wx:else>
+              <text class="tip-text">没有更多内容了</text>
+            </view>
+          </view>
+          <!-- 底部加载提示 end -->
+          <!-- 如果当前数据为空则显示 start  -->
+          <view class="notfind1 {{CourseList.length === 0?'':'hidden'}}">
+            <image src='/images/notfind.png'></image>
+            <view class='text1'>暂无数据</view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

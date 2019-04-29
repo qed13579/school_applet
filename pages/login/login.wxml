@@ -1,0 +1,20 @@
+<view class="res_top">
+  <image class='res_img' src='../../images/book.png'></image>
+</view>
+<view class='res_middlebox'>
+  <view class='res_little' style='margin-bottom:120rpx;'>
+    <image class='icon' src='../../images/tel.png'></image>
+    <view class='input'>
+      <input placeholder='请输入手机号码' type="number"></input>
+    </view>
+  </view>
+  <view class='res_little'>
+    <image class='icon' src='../../images/password.png'></image>
+    <view class='input'>
+      <input placeholder='请输入密码' type='password'></input>
+    </view>
+  </view>
+</view>
+<button class='res_confirm'>登录</button>
+<view class='forgetpassword' bindtap='toforgetpassword'>忘记密码</view>
+<image class='wx' bindtap='tologinauthorization' src='../../images/wx.png'></image>

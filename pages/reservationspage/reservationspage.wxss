@@ -1,0 +1,68 @@
+.res_top {
+  display: block;
+  height: 400rpx;
+  width: 100%;
+  /* background-color: red;  */
+  padding-top: 120rpx;
+  box-sizing: border-box;
+}
+
+.res_img {
+  margin: 0 auto;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  /* background-color: blue; */
+}
+
+.res_middlebox {
+  padding-left: 105rpx;
+  display: block;
+  height: 250rpx;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.res_little {
+  display: block;
+  width: 85%;
+  height: 56rpx;
+  /* background-color: red; */
+}
+
+.icon { 
+  float: left;
+  display: block;
+  height: 56rpx;
+  width: 40rpx;
+  /* background-color: blue; */
+}
+
+.input {
+  font-size: 26rpx;
+  margin-left: 6rpx;
+  float: left;
+  display: block;
+  width: 75%;
+  height: 56rpx;
+  /* background-color: red; */
+  border-bottom: 1rpx dashed #f22447;
+  padding-left: 40rpx;
+}
+
+.res_confirm {
+  font-size: 34rpx;
+  margin-top: 140rpx;
+  display: block;
+  height: 80rpx;
+  width: 265rpx;
+  background-color: #fd4852;
+  border-radius: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  border: none;
+}
+
+.res_confirm::after {
+  display: none;
+}

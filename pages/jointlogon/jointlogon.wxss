@@ -1,0 +1,138 @@
+.res_top{
+  display: block;
+  height: 400rpx;
+  width: 100%;
+   /* background-color: red;  */
+  padding-top: 120rpx;
+  box-sizing: border-box;
+}
+
+
+.border{
+  margin: 0 auto;
+ 
+
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+    position: relative;
+    border: 2rpx solid transparent;
+    border-radius: 100%;
+    background: linear-gradient(orange, violet,skyblue,yellow,green);
+    background-clip: padding-box;
+    padding: 2rpx;
+    /* just to show box-shadow still works fine */
+    /* box-shadow: 0 3px 9px black, inset 0 0 9px white; */
+}
+
+.border::after{
+    position: absolute;
+
+    background: linear-gradient(red, blue,skyblue,yellow,green);
+    content: '';
+    z-index: -1;
+     border-radius: 100%;
+}
+.cover{
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  border-radius: 100%;
+  background-color: white;
+}
+.head{
+  border-radius: 100%;
+  display: block;
+  height: 158rpx;
+  width: 158rpx;
+  position: absolute;
+  left: 2rpx;
+  top: 2rpx;
+}
+.word{
+  color: #333333;
+  display: block;
+  height: 30rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  line-height: 30rpx;
+
+}
+.res_img{
+  margin: 0 auto;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  /* background-color: blue; */
+}
+
+
+
+.res_middlebox{
+  padding-left: 105rpx;
+  display: block;
+  height: 50rpx;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.res_little{
+  display: block;
+  width: 85%;
+  height: 56rpx;
+  /* background-color: red; */
+}
+.icon{
+  float: left;
+  display: block;
+  height: 56rpx;
+  width: 40rpx;
+  /* background-color: blue; */
+}
+.input{
+  font-size: 26rpx;
+  margin-left: 6rpx;
+   float: left;
+  display: block;
+  width: 75%;
+  height: 56rpx;
+     /* background-color: red; */
+     border-bottom: 1rpx dashed  #f22447;
+     padding-left: 40rpx; 
+}
+.res_confirm{
+  font-size: 34rpx;
+  margin-top: 340rpx;
+  display: block;
+  height: 80rpx;
+  width: 265rpx;
+   background-color: #fd4852; 
+  border-radius: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  border: none;
+}
+.res_confirm::after{
+
+display:none;
+
+}
+.forgetpassword{
+  display: block;
+  width: 100%;
+  height: 30rpx;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: #808080;
+}
+.wx{
+  display: block;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-top: 90rpx;
+}

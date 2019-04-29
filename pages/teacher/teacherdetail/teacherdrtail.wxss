@@ -1,0 +1,42 @@
+/* pages/teacher/teacherdetail/teacherdrtail.wxss */
+/* pages/coursedetail/coursedetail.wxss */
+page{
+  font-size: 32rpx;
+}
+.main{
+  padding: 20rpx;
+}
+.course-img{
+  width: 100%;
+
+}
+.course-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  width: 250rpx;
+  /* background: rebeccapurple; */
+  border-radius: 50rpx;
+  margin-top: 80rpx;
+  
+}
+.yuyue-btn{
+ margin-right: 10rpx;
+ background: #FD4753;
+ color:#fff;
+}
+.buy-btn{
+ background: #fff;
+ color:#FD4753;
+ border: 1px solid #FD4753;
+}
+.try{
+ color:#FD4753;
+ text-align: center;
+ margin-top: 20rpx;
+}

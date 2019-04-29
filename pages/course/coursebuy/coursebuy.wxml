@@ -1,0 +1,34 @@
+<!--pages/course/coursebuy/coursebuy.wxml-->
+<view class='wrap'>
+  <view class='pg-header'>
+    <view>
+      <image class='course-img' src='{{img}}'></image>
+    </view>
+    <view class='course-desc'>
+      <view class='course-time'>{{typename}}类{{title}}课12节课时,每课时60分钟</view>
+      <view class='price-box'>
+        <view class='price'>价格：{{price}}元</view>
+        <view class='num'>X {{num}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='buy-box'>
+    <text class='buy-box-num'>购买数量</text>
+     <view ><text decode="{{true}}" bindtap='reduce'> -&nbsp;&nbsp;</text> {{num}}<text decode="{{true}}" bindtap='add'>&nbsp;&nbsp;+</text></view> 
+  </view>
+  <!-- <view class='pay-box buy-box' bindtap='click'>
+    <text class='buy-box-num'>选择支付方式</text>
+    <text class='xiala'></text>
+  </view>
+  <view class='payway' hidden='{{hidden}}'>
+    <view class='alipay'>支付宝</view>
+    <view class='weixin'>微信</view>
+  </view> -->
+  <view class='total-box'>
+    <text class='product-num'>共{{num}}件商品</text>
+    <text class='allprice'>小计：￥{{price*num}}</text>
+  </view>
+  <view class='buy-btn'>
+    确定购买
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/teacher/teacherdetail/teacherdrtail.wxml-->
+<view class='main'>
+  <view>
+    <image src='{{img}}' class='course-img' style="height:{{imageHight}}px;"></image>
+  </view>
+  <view class='course-desc'>
+    <view>姓名：{{name}}</view>
+    <view>荣誉：{{honorary}}</view>
+    <view>电话：{{phone}}</view>
+    <view>简介：{{descs}}</view>
+  </view>
+</view>

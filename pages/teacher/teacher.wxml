@@ -1,0 +1,31 @@
+<!--pages/teacherdetail/teacherdetail.wxml-->
+<scroll-view scroll-y>
+  <view class='teacher-list'>
+    <block wx:for="{{TeacherDetailList}}" wx:key="{{key}}">
+      <view class='teacher-item' data-id="{{item.id}}">
+        <view class='item-left'>
+          <image src='{{item.img}}' class='teacher-img' data-id="{{item.id}}" bindtap='toteacherdetail'></image>
+          <view class='teacher-type'>{{item.name}}</view>
+        </view>
+        <view class='teacher-desc'>
+          <view class='time'>从业八年</view>
+          <view class='detail'>{{item.desc}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+   <view class="tips1" wx:if="{{isHasData}}" hidden='{{hidden}}'>
+            <view wx:if="{{hasMore}}" class="tip-text">
+              上拉加载...
+            </view>
+            <view wx:else>
+              <text class="tip-text">没有更多内容了</text>
+            </view>
+          </view>
+          <!-- 底部加载提示 end -->
+          <!-- 如果当前数据为空则显示 start  -->
+          <view class="notfind1 {{TeacherDetailList.length === 0?'':'hidden'}}">
+            <image src='/images/notfind.png'></image>
+            <view class='text1'>暂无数据</view>
+          </view>
+</scroll-view>

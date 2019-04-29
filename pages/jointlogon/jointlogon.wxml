@@ -1,0 +1,20 @@
+<view class="res_top">
+    <view class='border'>
+    <view class='cover'>
+      <image class='head' src='{{webUserData.avatarUrl}}'></image>
+    </view>
+  </view>
+  <view class='word'>微信账号：{{webUserData.nickName}}</view>
+</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class='res_middlebox'>
+  <view class='res_little' >
+    <image class='icon' src='../../images/tel.png'></image>
+    <view class='input'>
+      <input placeholder='请输入手机号码' type="number" name="input" value="{{webUserData.mobile}}"></input>
+    </view>
+  </view>
+</view>
+<button class='res_confirm' form-type='submit' >确认</button>
+</form>

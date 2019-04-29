@@ -1,0 +1,29 @@
+
+<block wx:for="{{classlist}}" wx:for-index="index" wx:key>
+<view class="mc_box">
+  <image class='mc_box_left'  src='{{classlist[index].img}}' data-id='{{classlist[index].classid}}' bindtap='tocoursedetail'   data-detail='{{classlist[index].detail}}' data-img='{{classlist[index].img}}' data-typename='{{classlist[index].classtype}}' data-classname='{{classlist[index].classname}}'></image>
+  <view class='mc_box_right'>
+    <view class='mc_box_right_top'>
+      <view class='mc_box_right_top_box'>购买课程：{{classlist[index].classname}}</view>
+      <view class='mc_box_right_top_box'>购买时长：{{classlist[index].sparetime}}课时</view>
+      <view class='mc_box_right_top_box'>购买时间：{{classlist[index].purchasetime}}</view>
+    </view>
+  </view>
+</view>
+<view class='hr'></view>
+</block>
+
+          <view class='tips'>
+            <view  wx:if="{{isHasData}}" hidden='{{hidden}}'>
+              <view wx:if="{{hasMore}}" class="tip-text">
+                上拉加载...
+              </view>
+              <view wx:else>
+                <text class="tip-text">没有更多内容了</text>
+              </view>
+            </view>
+            <view hidden='{{hidden}}' class='notfind1' wx:else >
+              <image src='/images/notfind.png'></image>
+              <view class='text1'>暂无数据</view>
+            </view>
+          </view>
