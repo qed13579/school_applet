@@ -1,9 +1,0 @@
-<view class="res_top">
-<view class='res_box'>
-<image class='res_left_img' src='../../images/icon.png' > </image>
-<image class='res_middle_img' src='../../images/arrow.png' > </image>
-<image class='res_right_img' src='../../images/wx.png'> </image>
-</view>
-</view>
- <view class='refuse'>为了更好地为您服务，请您点击按钮进行授权</view> 
-<button class='res_confirm'  open-type="getUserInfo" bindgetuserinfo="getWXUserinfo">确认授权</button>
